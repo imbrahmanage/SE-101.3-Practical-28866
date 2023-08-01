@@ -1,0 +1,62 @@
+class Employee {
+    private int empID;
+    private String empName;
+    private String empDesignation;
+
+    public Employee(int empID, String empName, String empDesignation) {
+        this.empID = empID;
+        this.empName = empName;
+        this.empDesignation = empDesignation;
+    }
+
+    public int getEmpID() {
+        return empID;
+    }
+
+    public String getEmpName() {
+        return empName;
+    }
+
+    public String getEmpDesignation() {
+        return empDesignation;
+    }
+
+    public void setEmpID(int empID) {
+        this.empID = empID;
+    }
+
+    public void setEmpName(String empName) {
+        this.empName = empName;
+    }
+
+    public void setEmpDesignation(String empDesignation) {
+        this.empDesignation = empDesignation;
+    }
+}
+
+public class TestEmployee {
+    public static void main(String[] args) {
+        
+        Employee mrBogdan = new Employee(101, "Mr. Bogdan", "Software Engineer");
+        Employee msBird = new Employee(102, "Ms. Bird", "Product Manager");
+
+        
+        mrBogdan.setEmpID(101);
+        mrBogdan.setEmpName("Mr. Bogdan");
+        mrBogdan.setEmpDesignation("Software Engineer");
+
+        msBird.setEmpID(102);
+        msBird.setEmpName("Ms. Bird");
+        msBird.setEmpDesignation("Product Manager");
+
+        System.out.println("Employee Information:");
+        System.out.println("ID: " + mrBogdan.getEmpID());
+        System.out.println("Name: " + mrBogdan.getEmpName());
+        System.out.println("Designation: " + mrBogdan.getEmpDesignation());
+
+        System.out.println("\nEmployee Information:");
+        System.out.println("ID: " + msBird.getEmpID());
+        System.out.println("Name: " + msBird.getEmpName());
+        System.out.println("Designation: " + msBird.getEmpDesignation());
+    }
+}
