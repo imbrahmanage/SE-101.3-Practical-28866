@@ -1,0 +1,38 @@
+class Employee {
+    private String name;
+    private double basicSalary;
+    private double bonus;
+
+    public Employee(String name, double basicSalary, double bonus) {
+        this.name = name;
+        this.basicSalary = basicSalary;
+        this.bonus = bonus;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getBasicSalary() {
+        return basicSalary;
+    }
+
+    public double getBonus() {
+        return bonus;
+    }
+
+    public double calculateBonusAmount() {
+        return basicSalary + bonus;
+    }
+}
+
+public class TestEmployee {
+    public static void main(String[] args) {
+        Employee emp = new Employee("Bogdan", 50000.0, 10000.0);
+
+        System.out.println("Employee Name: " + emp.getName());
+        System.out.println("Basic Salary: " + emp.getBasicSalary());
+        System.out.println("Bonus: " + emp.getBonus());
+        System.out.println("Bonus Amount: " + emp.calculateBonusAmount());
+    }
+}
